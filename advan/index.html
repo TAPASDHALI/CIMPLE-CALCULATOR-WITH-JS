@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Calculator</title>
+    <link rel="stylesheet" href="adv.css">
+</head>
+<body>
+
+    <center>
+    <h1>Create Advance Calculator</h1>
+    <div id="div-div">
+        <br>
+        <div class="div-cal">
+            <form action="" name="mainform">
+                <br>
+
+                <input type="text" name="result" class="inp-res" id="result">
+                <br><br>
+                <input type="button" name="1" value="1" class="input-btn" onclick="mainform.result.value += '1' " id="1">
+                <input type="button" name="2" value="2" class="input-btn" onclick="mainform.result.value += '2'" id="2">
+                <input type="button" name="3" value="3" class="input-btn" onclick="mainform.result.value += '3'" id="3">
+                <br><br>
+
+                <input type="button" name="4" value="4" class="input-btn" onclick="mainform.result.value += '4'" id="4">
+                <input type="button" name="5" value="5" class="input-btn" onclick="mainform.result.value += '5'" id="5">
+                <input type="button" name="6" value="6" class="input-btn" onclick="mainform.result.value += '6'" id="6">
+                <br><br>
+
+                <input type="button" name="7" value="7" class="input-btn" onclick="mainform.result.value += '7'" id="7">
+                <input type="button" name="8" value="8" class="input-btn" onclick="mainform.result.value += '8'" id="8">
+                <input type="button" name="9" value="9" class="input-btn" onclick="mainform.result.value += '9'" id="9">
+                <br><br>
+
+                <input type="button" name="0" value="0" class="input-btn" onclick="mainform.result.value += '0'" id="0">
+                <input type="button" name="+" value="+" class="input-op" onclick="mainform.result.value += '+'" id="+">
+                <input type="button" name="-" value="-" class="input-op" onclick="mainform.result.value += '-'" id="-">
+                <br><br>
+
+                <input type="button" name="*" value="*" class="input-op" onclick="mainform.result.value += '*'" id="*">
+                <input type="button" name="/" value="/" class="input-op" onclick="mainform.result.value += '/'" id="/">
+                <input type="button" name="%" value="%" class="input-op" onclick="mainform.result.value += '%'" id="%">
+                <br><br>
+
+                <input type="button" name="=" value="=" class="input-op" onclick="mainform.result.value = eval(mainform.result.value)">
+                <input type="button" name="off" value="OFF" class="input-of" onclick="off()" id="off">
+                <input type="button" name="on" value="ON" class="input-on">
+                <br><br>
+
+
+                <input type="button" name="clear" value="CLEAR ALL" class="input-cln" onclick="mainform.result.value = ''" id="CLEAR ALL">
+                <br><br>
+            </form>
+
+        </div>
+
+    </div>
+    </center>
+
+
+        <!-- HERE WE WRITE JS CODE -->
+    <script>
+            function Off(){
+            document.getElementById('result').disabled=true;
+
+            document.getElementById('1').disabled=true;
+            document.getElementById('2').disabled=true;
+            document.getElementById('3').disabled=true;
+            document.getElementById('4').disabled=true;
+            document.getElementById('5').disabled=true;
+            document.getElementById('6').disabled=true;
+            document.getElementById('7').disabled=true;
+            document.getElementById('8').disabled=true;
+            document.getElementById('9').disabled=true;
+
+            document.getElementById('+').disabled=true;
+            document.getElementById('-').disabled=true;
+            document.getElementById('*').disabled=true;
+            document.getElementById('/').disabled=true;
+            document.getElementById('%').disabled=true;
+            document.getElementById('off').disabled=true;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+
+body{
+    background: rgba(3, 66, 6, 0.919);
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+#div-div{
+    width: 430px;
+    height: 565px;
+    background: rgb(143, 9, 54);
+    border: 7px solid purple;
+    border-radius: 10px;
+    box-shadow: 1px 2px 3px 4px rgba(6, 118, 83, 0.782);
+}
+
+.div-cal{
+    width: 400px;
+    border: 7px solid rgba(16, 96, 5, 0.815);
+    border-radius: 10px;
+    background-color: rgb(32, 30, 30);
+    box-shadow: 1px 2px 3px 4px rgba(5, 65, 95, 0.782);
+    
+}
+
+.inp-res{
+    width: 392px;
+    height: 35px;
+    font-size: 35px;
+    border-radius: 5px;
+}
+
+.input-btn{
+    width: 130px;
+    background-color: rgba(11, 11, 168, 0.829);
+    border-radius: 5px;
+    color: white;
+    font-size: 35px;
+}
+
+.input-op{
+    width: 130px;
+    background-color: rgba(240, 237, 40, 0.792);
+    border-radius: 5px;
+    /* color: white; */
+    font-size: 35px;
+}
+
+
+.input-of{
+    width: 130px;
+    background-color: rgb(135, 26, 26);
+    border-radius: 5px;
+    font-size: 35px;
+    color: white;
+}
+
+.input-on{
+    width: 130px;
+    background-color: rgb(5, 112, 5);
+    border-radius: 5px;
+    font-size: 35px;
+    color: white;
+}
+
+
+.input-cln{
+    background-color: rgb(5, 112, 5);
+    border-radius: 5px;
+    font-size: 35px;
+    width: 390px;
+    color: white;
+}

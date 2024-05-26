@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Simple Calculator Using JS</title>
+    <link rel="stylesheet" href="ind.css">
+    <!-- <style>
+        h1{
+            text-align: center;
+        }
+
+        table{
+            align-items: center;
+            text-align: center;
+            background-color: rgba(1, 0, 0, 0.756);
+            box-shadow: 2px 4px 6px rgb(60, 26, 26);
+        }
+
+        input{
+            width: 135px;
+            height: 35px;
+        }
+
+        .input-cls{
+            width: 127px;
+        }
+
+        .keytp{
+            width: 50px;
+            height: 50px;
+            background-color: rgba(13, 13, 118, 0.814);
+            border-radius: 15px;
+            color: white;
+            font-size: 25px;
+        }
+
+        .operator-cls{
+            font-size: 25px;
+            background-color: rgba(192, 192, 14, 0.9);
+        }
+
+        .operator-clss{
+            background-color: rgb(121, 13, 13);
+            font-size: 25px;
+        }
+
+        
+        .operator-clsss{
+            background-color: rgba(17, 102, 17, 0.832);
+            font-size: 25px;
+        }
+    </style> -->
+</head>
+<body>
+    <h1>Create Simple Calculator</h1>
+    <table border="0" cellspacing="10" align="center" class="table-cn">
+        <tr>
+            <td><input type="text" placeholder="number1" class="input-cls" id="one"></td>
+            <td><input type="text" placeholder="number2" class="input-cls" id="two"></td>
+            <td><input type="text" placeholder="result" class="input-cls" id="ans"></td>
+        </tr>
+
+        <tr>
+            <th><input type="submit" value="1" onclick="onee()" class="keytp" id="1"></th>
+            <th><input type="submit" value="2" class="keytp" onclick="twoo()" id="2"></th>
+            <th><input type="submit" value="3" class="keytp" id="3"></th>
+        </tr>
+
+        <tr>
+            <th><input type="submit" value="4" class="keytp" id="4"></th>
+            <th><input type="submit" value="5" class="keytp" id="5"></th>
+            <th><input type="submit" value="6" class="keytp" id="6"></th>
+        </tr>
+
+        <tr>
+            <th><input type="submit" value="7" class="keytp" id="7"></th>
+            <th><input type="submit" value="8" class="keytp" id="8"></th>
+            <th><input type="submit" value="9" class="keytp" id="9"></th>
+        </tr>
+
+        <tr>
+            <td><input type="submit" value="+" class="operator-cls" onclick="sum()" id="+"></td>
+            <td><input type="submit" value="-" class="operator-cls" onclick="sub()" id="-"></td>
+            <td><input type="submit" value="*" class="operator-cls" onclick="mul()" id="*"></td>
+        </tr>
+
+        <tr>
+            <td><input type="submit" value="/" class="operator-cls" onclick="div()" id="/"></td>
+            <td><input type="submit" value="%" class="operator-cls" onclick="fltd()" id="%"></td>
+            <td><input type="submit" value="Off" class="operator-clss" onclick="off()" id="off"></td>
+        </tr>
+
+        <tr>
+            <th colspan="3"><input type="submit" value="On" id="on" class="operator-clsss" onclick="on()"></th>
+        </tr>
+    </table>
+
+    <script>
+        function off(){
+            document.getElementById('one').disabled=true;
+            document.getElementById('two').disabled=true;
+            document.getElementById('ans').disabled=true;
+
+            document.getElementById('1').disabled=true;
+            document.getElementById('2').disabled=true;
+            document.getElementById('3').disabled=true;
+            document.getElementById('4').disabled=true;
+            document.getElementById('5').disabled=true;
+            document.getElementById('6').disabled=true;
+            document.getElementById('7').disabled=true;
+            document.getElementById('8').disabled=true;
+            document.getElementById('9').disabled=true;
+
+            document.getElementById('+').disabled=true;
+            document.getElementById('-').disabled=true;
+            document.getElementById('*').disabled=true;
+            document.getElementById('/').disabled=true;
+            document.getElementById('%').disabled=true;
+            document.getElementById('off').disabled=true;
+        }
+
+        function on(){
+            document.getElementById('one').disabled=false;
+            document.getElementById('two').disabled=false;
+            document.getElementById('ans').disabled=false;
+
+            document.getElementById('1').disabled=false;
+            document.getElementById('2').disabled=false;
+            document.getElementById('3').disabled=false;
+            document.getElementById('4').disabled=false;
+            document.getElementById('5').disabled=false;
+            document.getElementById('6').disabled=false;
+            document.getElementById('7').disabled=false;
+            document.getElementById('8').disabled=false;
+            document.getElementById('9').disabled=false;
+
+            document.getElementById('+').disabled=false;
+            document.getElementById('-').disabled=false;
+            document.getElementById('*').disabled=false;
+            document.getElementById('/').disabled=false;
+            document.getElementById('%').disabled=false;
+            document.getElementById('off').disabled=false;
+        }
+
+
+        function onee(){
+            document.getElementById('one').value=1;
+        }
+
+        function twoo(){
+            document.getElementById('one').value=2;
+        }
+
+        // code for addition
+        function sum(){
+            var a = parseInt(document.getElementById('one').value);
+            var b = parseInt(document.getElementById('two').value);
+            var c = a + b;
+            parseInt(document.getElementById('ans').value=c);
+        }
+
+        // code for substraction
+        function sub(){
+            var a = parseInt(document.getElementById('one').value);
+            var b = parseInt(document.getElementById('two').value);
+            var c = a - b;
+            parseInt(document.getElementById('ans').value=c);
+        }
+
+
+        // code for multification
+        function mul(){
+            var a = parseInt(document.getElementById('one').value);
+            var b = parseInt(document.getElementById('two').value);
+            var c = a * b;
+            parseInt(document.getElementById('ans').value=c);
+        }
+
+
+        // code for division
+        function div(){
+            var a = parseInt(document.getElementById('one').value);
+            var b = parseInt(document.getElementById('two').value);
+            var c = a / b;
+            parseInt(document.getElementById('ans').value=c);
+        }
+
+
+        // code for modules 
+        function fltd(){
+            var a = parseInt(document.getElementById('one').value);
+            var b = parseInt(document.getElementById('two').value);
+            var c = a % b;
+            parseInt(document.getElementById('ans').value=c);
+        }
+    </script>
+</body>
+</html>
